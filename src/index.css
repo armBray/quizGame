@@ -1,0 +1,133 @@
+:root {
+  font-family: "Inter", "Karla", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+a {
+
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  margin: 0;
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3.2em;
+  line-height: 1.1;
+  text-align: center;
+
+  color: #293264;
+}
+
+p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.2em;
+  line-height: 1.1;
+  text-align: center;
+
+  color: #293264;
+}
+.container {
+  display: relative;
+}
+
+button.primary {
+  border: 1px solid transparent;
+  padding: 1em 3em;
+
+  font-family: inherit;
+  font-size: 1em;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.1;
+  text-align: center;
+
+  cursor: pointer;
+  /* transition: border-color 0.25s; */
+
+  background: #4D5B9E;
+  border-radius: 15px;
+
+  color: #F5F7FB;
+}
+button.primary:hover {
+  background: #5c6691;
+}
+
+.blob {
+  position: absolute;
+  opacity: 0.3;
+  width: 200px;
+  aspect-ratio: 1/1;
+  animation: animate 10s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite
+    alternate forwards;
+  filter: blur(40px);
+  /* z-index: -1; */
+  background: linear-gradient(
+    47deg,
+    rgba(255, 88, 139, 1) 21%,
+    rgb(0 164 173) 67%,
+    rgba(118, 74, 166, 1) 81%
+  );
+
+  /*  Optional  */
+  /*   box-shadow: inset 50px 50px 17px 0px #ff588b,
+    inset 100px 100px 17px 0px #66319f; */
+}
+
+.blob-right{
+  top:40px;
+  right: 160px;
+}
+
+.blob-left{
+  bottom:90px;
+  left: 200px;
+}
+
+@keyframes animate {
+  0% {
+    /* translate: 40% -25%; */
+    border-radius: 60% 40% 30% 70% / 100% 85% 92% 74%;
+  }
+  50% {
+    /* translate: 0% 13%; */
+    border-radius: 20% 71% 47% 70% / 81% 15% 22% 54%;
+    rotate: 41deg;
+    scale: 1.15;
+  }
+  100% {
+    /* translate: -45% 39%; */
+    border-radius: 100% 75% 92% 74% / 60% 80% 30% 70%;
+    rotate: -60deg;
+    scale: 1.05;
+  }
+}
